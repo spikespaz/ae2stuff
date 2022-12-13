@@ -68,9 +68,9 @@ repositories {
         name "JEI"
         url "http://dvs1.progwml6.com/files/maven"
     }
+
     maven {
-        name "HWYLA"
-        url "http://tehnut.info/maven"
+        url "https://cursemaven.com"
     }
 }
 
@@ -78,10 +78,9 @@ dependencies {
     compile "net.bdew:bdlib:${config.bdlib.version}-mc${config.minecraft.version}:dev"
 
     deobfCompile "mezz.jei:jei_${config.minecraft.version}:${config.jei.version}"
-    deobfCompile "mcp.mobius.waila:Hwyla:${config.hwyla.version}"
+    deobfCompile "curse.maven:Hwyla-${config.hwyla.cfid}:${config.hwyla.fileid}-sources-api"
 
-    deobfCompile "appeng:appliedenergistics2:${config.ae2.version}@jar"
-
+    deobfCompile "curse.maven:AppliedEnergetistics2-${config.ae2.cfid}:${config.ae2.fileid}"
 }
 
 import org.apache.tools.ant.filters.ReplaceTokens
